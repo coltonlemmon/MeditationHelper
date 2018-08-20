@@ -19,6 +19,9 @@
 		4DC1CC8D212B475A001BD0E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CC8C212B475A001BD0E0 /* NotificationController.swift */; };
 		4DC1CC8F212B475A001BD0E0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CC8E212B475A001BD0E0 /* ComplicationController.swift */; };
 		4DC1CC91212B475B001BD0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC1CC90212B475B001BD0E0 /* Assets.xcassets */; };
+		4DC1CCA4212B487C001BD0E0 /* TimeSelectionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CCA3212B487C001BD0E0 /* TimeSelectionInterfaceController.swift */; };
+		4DC1CCA7212B48B6001BD0E0 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CCA6212B48B6001BD0E0 /* TimerInterfaceController.swift */; };
+		4DC1CCA9212B4B2E001BD0E0 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CCA8212B4B2E001BD0E0 /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		4DC1CC90212B475B001BD0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC1CC92212B475B001BD0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC1CC93212B475B001BD0E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4DC1CCA3212B487C001BD0E0 /* TimeSelectionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionInterfaceController.swift; sourceTree = "<group>"; };
+		4DC1CCA6212B48B6001BD0E0 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
+		4DC1CCA8212B4B2E001BD0E0 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,12 +151,14 @@
 		4DC1CC87212B475A001BD0E0 /* MeditationHelper WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4DC1CCA5212B48A1001BD0E0 /* InterfaceControllers */,
 				4DC1CC8A212B475A001BD0E0 /* ExtensionDelegate.swift */,
 				4DC1CC8C212B475A001BD0E0 /* NotificationController.swift */,
 				4DC1CC8E212B475A001BD0E0 /* ComplicationController.swift */,
 				4DC1CC90212B475B001BD0E0 /* Assets.xcassets */,
 				4DC1CC92212B475B001BD0E0 /* Info.plist */,
 				4DC1CC93212B475B001BD0E0 /* PushNotificationPayload.apns */,
+				4DC1CCA8212B4B2E001BD0E0 /* Stopwatch.swift */,
 			);
 			path = "MeditationHelper WatchKit Extension";
 			sourceTree = "<group>";
@@ -170,6 +178,15 @@
 				4DC1CC7C212B475A001BD0E0 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DC1CCA5212B48A1001BD0E0 /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC1CCA3212B487C001BD0E0 /* TimeSelectionInterfaceController.swift */,
+				4DC1CCA6212B48B6001BD0E0 /* TimerInterfaceController.swift */,
+			);
+			path = InterfaceControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +330,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC1CC8D212B475A001BD0E0 /* NotificationController.swift in Sources */,
+				4DC1CCA9212B4B2E001BD0E0 /* Stopwatch.swift in Sources */,
 				4DC1CC8F212B475A001BD0E0 /* ComplicationController.swift in Sources */,
 				4DC1CC8B212B475A001BD0E0 /* ExtensionDelegate.swift in Sources */,
+				4DC1CCA7212B48B6001BD0E0 /* TimerInterfaceController.swift in Sources */,
+				4DC1CCA4212B487C001BD0E0 /* TimeSelectionInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

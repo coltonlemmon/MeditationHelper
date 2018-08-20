@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ls4-Rl-FsG">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,61 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
+        <!--TimeSelectionInterfaceController-->
+        <scene sceneID="8RU-DJ-UPg">
+            <objects>
+                <controller identifier="TimeSelectionInterfaceController" id="Ls4-Rl-FsG" customClass="TimeSelectionInterfaceController" customModule="MeditationHelper_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="63" alignment="left" id="WiP-6J-9LG">
+                            <items>
+                                <button width="0.5" height="100" alignment="left" backgroundImage="1MinNew" id="pSB-AW-GFU">
+                                    <connections>
+                                        <action selector="minButtonTapped" destination="Ls4-Rl-FsG" id="M3z-wO-r7e"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="100" alignment="left" backgroundImage="1MinNew" id="u44-aX-6fK"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="twoMinButtonTapped" destination="u44-aX-6fK" id="Yg4-B1-P2L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--TimerInterfaceController-->
+        <scene sceneID="hEu-bV-58x">
+            <objects>
+                <controller identifier="TimerInterfaceController" id="Qf8-7r-tsm" customClass="TimerInterfaceController" customModule="MeditationHelper_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.69999999999999996" alignment="left" text="00:00:00" textAlignment="center" id="dWn-w9-gXm">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="wv2-VY-rRC">
+                            <items>
+                                <button width="0.5" alignment="left" title="Cancel" id="hmC-0x-QYO">
+                                    <connections>
+                                        <action selector="cancelButtonTapped" destination="Qf8-7r-tsm" id="QI6-yn-JnW"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Pause" id="LDT-Kt-GSV">
+                                    <connections>
+                                        <action selector="pauseButtonTapped" destination="Qf8-7r-tsm" id="fuX-rE-Fyo"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="cancelButton" destination="hmC-0x-QYO" id="6tq-Rf-H8T"/>
+                        <outlet property="pauseButton" destination="LDT-Kt-GSV" id="dMl-7u-6rU"/>
+                        <outlet property="timerLabel" destination="dWn-w9-gXm" id="vV8-3g-14H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>

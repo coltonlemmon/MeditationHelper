@@ -13,9 +13,13 @@ class TimeSelectionInterfaceController: WKInterfaceController {
     
     // MARK: - Outlets and Actions
     
-    @IBAction func minButtonTapped() {
-    }
     @IBOutlet var twoMinButtonTapped: WKInterfaceButton!
+    
+    @IBAction func minButtonTapped() {
+        let context: [String: Double] = ["time":60]
+        self.pushController(withName: "TimerInterfaceController", context: context)
+        
+    }
     
     // MARK: - Lifecycle
     

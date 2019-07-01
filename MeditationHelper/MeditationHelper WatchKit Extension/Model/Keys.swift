@@ -15,4 +15,9 @@ enum Keys {
     static let NotificationActionKey = "NotificationActionKey"
     static let NotificationCategoryKey = "NotificationCategoryKey"
     
+    // MARK: - UserDefaults Keys
+    
+    static let DefaultsHideKey = "DefaultsHideKey"
+    static let DefaultsIntervalKey = "DefaultsIntervalKey"
+    
 }

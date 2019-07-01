@@ -13,19 +13,29 @@ class TimeSelectionInterfaceController: WKInterfaceController {
     
     // MARK: - Outlets and Actions
     
-    @IBOutlet var twoMinButtonTapped: WKInterfaceButton!
+    @IBOutlet var twoMinButton: WKInterfaceButton!
+    @IBOutlet weak var oneMinuteButton: WKInterfaceButton!
+    
+    @IBAction func settingsButtonTapped() {
+        self.pushController(withName: "SettingsInterfaceController", context: nil)
+    }
     
     @IBAction func minButtonTapped() {
         let context: [String: Double] = ["time":60]
+        
         self.pushController(withName: "TimerInterfaceController", context: context)
         
+    }
+    @IBAction func twoMinButtonTapped() {
+        let context: [String: Double] = ["time":120]
+        self.pushController(withName: "TimerInterfaceController", context: context)
     }
     
     // MARK: - Lifecycle
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        //self.addMenuItem(withImageNamed: "", title: "", action: ) I dunno if this works or not like a collection view
         // Configure interface objects here.
     }
     

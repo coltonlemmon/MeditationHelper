@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D5ECDDC22C95ACF00E3DD92 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5ECDDB22C95ACF00E3DD92 /* Time.swift */; };
+		4D5ECDDE22C95B0800E3DD92 /* TimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5ECDDD22C95B0800E3DD92 /* TimeData.swift */; };
+		4D93914422C982DC00EE1B0E /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93914322C982DC00EE1B0E /* SettingsInterfaceController.swift */; };
+		4D93914922C98C4000EE1B0E /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93914822C98C4000EE1B0E /* Interval.swift */; };
 		4DC1CC66212B4757001BD0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1CC65212B4757001BD0E0 /* AppDelegate.swift */; };
 		4DC1CC6B212B4757001BD0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC1CC69212B4757001BD0E0 /* Main.storyboard */; };
 		4DC1CC6D212B4759001BD0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC1CC6C212B4759001BD0E0 /* Assets.xcassets */; };
@@ -70,6 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D5ECDDB22C95ACF00E3DD92 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		4D5ECDDD22C95B0800E3DD92 /* TimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeData.swift; sourceTree = "<group>"; };
+		4D93914322C982DC00EE1B0E /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
+		4D93914822C98C4000EE1B0E /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 		4DC1CC62212B4757001BD0E0 /* MeditationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC1CC65212B4757001BD0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC1CC6A212B4757001BD0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +121,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D93914722C98C0900EE1B0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DC1CCA8212B4B2E001BD0E0 /* Stopwatch.swift */,
+				4DC1CCAE212B6CAB001BD0E0 /* Keys.swift */,
+				4D5ECDDB22C95ACF00E3DD92 /* Time.swift */,
+				4D5ECDDD22C95B0800E3DD92 /* TimeData.swift */,
+				4D93914822C98C4000EE1B0E /* Interval.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4DC1CC59212B4757001BD0E0 = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +182,11 @@
 				4DC1CC8A212B475A001BD0E0 /* ExtensionDelegate.swift */,
 				4DC1CC8C212B475A001BD0E0 /* NotificationController.swift */,
 				4DC1CC8E212B475A001BD0E0 /* ComplicationController.swift */,
+				4DC1CCAC212B6929001BD0E0 /* NotificationManager.swift */,
+				4D93914722C98C0900EE1B0E /* Model */,
 				4DC1CC90212B475B001BD0E0 /* Assets.xcassets */,
 				4DC1CC92212B475B001BD0E0 /* Info.plist */,
 				4DC1CC93212B475B001BD0E0 /* PushNotificationPayload.apns */,
-				4DC1CCA8212B4B2E001BD0E0 /* Stopwatch.swift */,
-				4DC1CCAC212B6929001BD0E0 /* NotificationManager.swift */,
-				4DC1CCAE212B6CAB001BD0E0 /* Keys.swift */,
 			);
 			path = "MeditationHelper WatchKit Extension";
 			sourceTree = "<group>";
@@ -194,6 +213,7 @@
 			children = (
 				4DC1CCA3212B487C001BD0E0 /* TimeSelectionInterfaceController.swift */,
 				4DC1CCA6212B48B6001BD0E0 /* TimerInterfaceController.swift */,
+				4D93914322C982DC00EE1B0E /* SettingsInterfaceController.swift */,
 			);
 			path = InterfaceControllers;
 			sourceTree = "<group>";
@@ -341,11 +361,15 @@
 			files = (
 				4DC1CC8D212B475A001BD0E0 /* NotificationController.swift in Sources */,
 				4DC1CCAF212B6CAB001BD0E0 /* Keys.swift in Sources */,
+				4D93914922C98C4000EE1B0E /* Interval.swift in Sources */,
+				4D93914422C982DC00EE1B0E /* SettingsInterfaceController.swift in Sources */,
 				4DC1CCA9212B4B2E001BD0E0 /* Stopwatch.swift in Sources */,
 				4DC1CC8F212B475A001BD0E0 /* ComplicationController.swift in Sources */,
 				4DC1CC8B212B475A001BD0E0 /* ExtensionDelegate.swift in Sources */,
 				4DC1CCAD212B6929001BD0E0 /* NotificationManager.swift in Sources */,
+				4D5ECDDC22C95ACF00E3DD92 /* Time.swift in Sources */,
 				4DC1CCA7212B48B6001BD0E0 /* TimerInterfaceController.swift in Sources */,
+				4D5ECDDE22C95B0800E3DD92 /* TimeData.swift in Sources */,
 				4DC1CCA4212B487C001BD0E0 /* TimeSelectionInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +549,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -547,7 +571,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -566,7 +590,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -585,7 +609,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ls4-Rl-FsG">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14810.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ls4-Rl-FsG">
+    <device id="watch38"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14619.8"/>
     </dependencies>
     <scenes>
         <!--TimeSelectionInterfaceController-->
@@ -14,31 +11,79 @@
             <objects>
                 <controller identifier="TimeSelectionInterfaceController" id="Ls4-Rl-FsG" customClass="TimeSelectionInterfaceController" customModule="MeditationHelper_WatchKit_Extension">
                     <items>
-                        <group width="1" height="63" alignment="left" id="WiP-6J-9LG">
+                        <button width="1" height="0.20000000000000001" alignment="left" title="Settings" id="HzH-p8-bW0">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="settingsButtonTapped" destination="Ls4-Rl-FsG" id="HFu-i6-b5w"/>
+                            </connections>
+                        </button>
+                        <group width="1" height="0.5" alignment="left" id="WiP-6J-9LG">
                             <items>
-                                <button width="0.5" height="100" alignment="left" backgroundImage="1MinNew" id="pSB-AW-GFU">
+                                <button width="0.5" height="100" alignment="left" backgroundImage="1.circle.fill" catalog="system" id="pSB-AW-GFU">
                                     <connections>
                                         <action selector="minButtonTapped" destination="Ls4-Rl-FsG" id="M3z-wO-r7e"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="100" alignment="left" backgroundImage="1MinNew" id="u44-aX-6fK"/>
+                                <button width="0.5" height="100" alignment="left" backgroundImage="2.circle.fill" catalog="system" id="u44-aX-6fK">
+                                    <connections>
+                                        <action selector="twoMinButtonTapped" destination="Ls4-Rl-FsG" id="cwh-Dp-qga"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="twoMinButtonTapped" destination="u44-aX-6fK" id="Yg4-B1-P2L"/>
+                        <outlet property="oneMinuteButton" destination="pSB-AW-GFU" id="u5d-5M-qns"/>
+                        <outlet property="twoMinButton" destination="u44-aX-6fK" id="fJc-O3-A0u"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--SettingsInterfaceController-->
+        <scene sceneID="OyR-1E-H72">
+            <objects>
+                <controller identifier="SettingsInterfaceController" id="8aV-SC-9YV" customClass="SettingsInterfaceController" customModule="MeditationHelper_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="g57-Vp-NWG">
+                            <items>
+                                <label width="1" alignment="left" text="Success Interval" textAlignment="center" id="DX5-sA-MoY">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <picker height="37" alignment="left" id="blb-D7-7IC">
+                                    <connections>
+                                        <action selector="intervalSelected:" destination="8aV-SC-9YV" id="l4s-yg-bHR"/>
+                                    </connections>
+                                </picker>
+                                <switch width="1" alignment="left" value="YES" title="Hide Timer" id="LdQ-AK-p6a">
+                                    <connections>
+                                        <action selector="hideChanged:" destination="8aV-SC-9YV" id="SDs-v4-5UH"/>
+                                    </connections>
+                                </switch>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Save" id="qCA-4j-MWL">
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <connections>
+                                <action selector="saveButtonTapped" destination="8aV-SC-9YV" id="aAD-QJ-DCR"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="hideSwitch" destination="LdQ-AK-p6a" id="7xc-8s-bPT"/>
+                        <outlet property="intervalPicker" destination="blb-D7-7IC" id="8xF-HJ-lrp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="463" y="40"/>
         </scene>
         <!--TimerInterfaceController-->
         <scene sceneID="hEu-bV-58x">
             <objects>
                 <controller identifier="TimerInterfaceController" id="Qf8-7r-tsm" customClass="TimerInterfaceController" customModule="MeditationHelper_WatchKit_Extension">
                     <items>
-                        <label width="1" height="0.69999999999999996" alignment="left" text="00:00:00" textAlignment="center" id="dWn-w9-gXm">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        <label width="1" height="0.69999999999999996" alignment="left" text="00:00" textAlignment="center" id="dWn-w9-gXm">
+                            <fontDescription key="font" type="system" pointSize="50"/>
                         </label>
                         <group width="1" height="0.29999999999999999" alignment="left" id="wv2-VY-rRC">
                             <items>
@@ -88,4 +133,8 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.circle.fill" catalog="system" width="38" height="37"/>
+        <image name="2.circle.fill" catalog="system" width="38" height="37"/>
+    </resources>
 </document>

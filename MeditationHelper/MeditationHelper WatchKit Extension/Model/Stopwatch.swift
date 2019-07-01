@@ -38,14 +38,14 @@ class Stopwatch {
             if !(timeLeft < 0) {
                 let minutesLeft = Int(timeLeft) / 60
                 let secondsLeft = Int(timeLeft) % 60
-                let ms = Int((timeLeft * 10).truncatingRemainder(dividingBy: 10))
-                return String(format: "%02i:%02i:%1", minutesLeft, secondsLeft, ms)
+//                let ms = Int((timeLeft * 10).truncatingRemainder(dividingBy: 10))
+                return String(format: "%02i:%02i", minutesLeft, secondsLeft)
             } else {
                 self.stop()
-                return "00:00:0"
+                return "00:00"
             }
         }
-        return "00:00:0"
+        return "00:00"
     }
     
     var isRunning: Bool {
